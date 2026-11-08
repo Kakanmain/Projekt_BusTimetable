@@ -1,12 +1,13 @@
 package pl.polsl.bustimetable.model;
 
+import pl.polsl.bustimetable.exceptions.BusTimetableException;
 import java.util.ArrayList;
 
 /**
  * Represents a bus stop with its name and bus lines.
  * 
  * @author Bartosz Dyba
- * @version 1.0
+ * @version 1.1
  */
 public class BusStop {
     /** Name of the bus stop. */
@@ -24,7 +25,7 @@ public class BusStop {
     */
     public BusStop(String name) throws BusTimetableException {
         if (name.isEmpty()) {
-            throw new BusTimetableException("Bus stop name cannot be empty!");
+            throw new BusTimetableException("Bus stop name cannot be empty!!!");
         }
         this.busStopName = name;
     }
@@ -48,7 +49,7 @@ public class BusStop {
     public void addBusLine(Bus line)throws BusTimetableException{
         for (Bus buses : buses) {
             if(buses.getBusName().equals(line.getBusName())){
-                throw new BusTimetableException("Bus already exists at this bus stop!");
+                throw new BusTimetableException("Bus already exists at this bus stop!!!");
             }
         }
         buses.add(line);

@@ -1,10 +1,11 @@
 pl\polsl\bustimetable\model\Bus.class
-pl\polsl\bustimetable\model\BusTimetableException.class
 pl\polsl\bustimetable\model\BusStop.class
 pl\polsl\bustimetable\model\package-info.class
-pl\polsl\bustimetable\view\View.class
+pl\polsl\bustimetable\exceptions\package-info.class
 pl\polsl\bustimetable\controller\package-info.class
 pl\polsl\bustimetable\BusTimetable.class
+pl\polsl\bustimetable\exceptions\BusTimetableException.class
 pl\polsl\bustimetable\package-info.class
+pl\polsl\bustimetable\view\Window.class
 pl\polsl\bustimetable\view\package-info.class
 pl\polsl\bustimetable\controller\Controller.class

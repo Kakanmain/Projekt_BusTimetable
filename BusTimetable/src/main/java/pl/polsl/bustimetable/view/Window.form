@@ -1,0 +1,1028 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Container class="javax.swing.JFrame" name="addBusStopWindow">
+      <Properties>
+        <Property name="location" type="java.awt.Point" editor="org.netbeans.beaninfo.editors.PointEditor">
+          <Point value="[700, 300]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[400, 316]"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace pref="54" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="buttonReturn" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="textEnterBusStopName" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="textAddNewBusStopMainText" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="textFieldBusStopName" min="-2" pref="220" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="buttonAddBusStopName" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                  <Component id="textAddNewBusStopMainText" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="96" max="32767" attributes="0"/>
+                  <Component id="textEnterBusStopName" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="buttonAddBusStopName" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="textFieldBusStopName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="buttonReturn" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="textAddNewBusStopMainText">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="36" style="0"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="Add new bus stop"/>
+            <Property name="toolTipText" type="java.lang.String" value="Text: Add new bus stop"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="buttonAddBusStopName">
+          <Properties>
+            <Property name="mnemonic" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="KeyEvent.VK_A" type="code"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Add"/>
+            <Property name="toolTipText" type="java.lang.String" value="Adds written bus stop"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonAddBusStopNameActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textFieldBusStopName">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="Enter a bus stop name"/>
+          </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Enter a bus stop name"/>
+          </AccessibilityProperties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldBusStopNameActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="buttonReturn">
+          <Properties>
+            <Property name="mnemonic" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="KeyEvent.VK_R" type="code"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Return"/>
+            <Property name="toolTipText" type="java.lang.String" value="Return to main menu"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonReturnActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="textEnterBusStopName">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Enter bus stop name:"/>
+            <Property name="toolTipText" type="java.lang.String" value="Text: Enter bus stop name:"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JFrame" name="addBusLineWindow">
+      <Properties>
+        <Property name="location" type="java.awt.Point" editor="org.netbeans.beaninfo.editors.PointEditor">
+          <Point value="[700, 300]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[400, 316]"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace pref="54" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="buttonReturnToAddBusStop" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="textEnterBusLineName" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="textAddNewBusLineMainText" alignment="1" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="textFieldBusLineName" min="-2" pref="220" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="buttonAddBusLine" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
+                  <Component id="textAddedBusStopInBusLine" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="textUserAddedBusStop" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                  <Component id="textAddNewBusLineMainText" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="textAddedBusStopInBusLine" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="textUserAddedBusStop" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="74" max="32767" attributes="0"/>
+                  <Component id="textEnterBusLineName" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="buttonAddBusLine" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="textFieldBusLineName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="buttonReturnToAddBusStop" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="textAddNewBusLineMainText">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="36" style="0"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="Add new bus stop"/>
+            <Property name="toolTipText" type="java.lang.String" value="Text: Add new bus stop"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="buttonAddBusLine">
+          <Properties>
+            <Property name="mnemonic" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="KeyEvent.VK_A" type="code"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Add"/>
+            <Property name="toolTipText" type="java.lang.String" value="Adds written bus line"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonAddBusLineActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textFieldBusLineName">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="Enter a bus line name"/>
+          </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Enter a bus line name"/>
+          </AccessibilityProperties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldBusLineNameActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="buttonReturnToAddBusStop">
+          <Properties>
+            <Property name="mnemonic" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="KeyEvent.VK_R" type="code"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Return"/>
+            <Property name="toolTipText" type="java.lang.String" value="Return to adding bus stop"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonReturnToAddBusStopActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="textAddedBusStopInBusLine">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Added bus stop: "/>
+            <Property name="toolTipText" type="java.lang.String" value="Text: Added bus stop: "/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="textEnterBusLineName">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Enter bus line name:"/>
+            <Property name="toolTipText" type="java.lang.String" value="Text: Enter bus line name:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="textUserAddedBusStop">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="Added bus stop"/>
+          </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="addedBuStop"/>
+          </AccessibilityProperties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JFrame" name="addDepartureTimeWindow">
+      <Properties>
+        <Property name="location" type="java.awt.Point" editor="org.netbeans.beaninfo.editors.PointEditor">
+          <Point value="[700, 300]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[400, 316]"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace pref="54" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="buttonReturnToAddingBusLine" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="textEnterDepartureTime" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="textAddDepartureTimeMainText" alignment="1" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="textFieldDepartureTime" min="-2" pref="220" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="buttonAddDepartureTime" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="textConfirmationAddingTime" alignment="1" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="textAddedBusLine" max="32767" attributes="0"/>
+                      <Component id="textAddedBusStopInDepartureTime" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="textUserAddedBusStop2" min="-2" max="-2" attributes="0"/>
+                      <Component id="textUserAddedBusLine" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                  <Component id="textAddDepartureTimeMainText" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="textAddedBusStopInDepartureTime" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="textUserAddedBusStop2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="textAddedBusLine" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="textUserAddedBusLine" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="52" max="32767" attributes="0"/>
+                  <Component id="textEnterDepartureTime" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="buttonAddDepartureTime" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="textFieldDepartureTime" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="textConfirmationAddingTime" min="-2" pref="22" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                  <Component id="buttonReturnToAddingBusLine" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="textAddDepartureTimeMainText">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="36" style="0"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="Add new bus stop"/>
+            <Property name="toolTipText" type="java.lang.String" value="Text: Add new bus stop"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="buttonAddDepartureTime">
+          <Properties>
+            <Property name="mnemonic" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="KeyEvent.VK_A" type="code"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Add"/>
+            <Property name="toolTipText" type="java.lang.String" value="Adds written departure time"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonAddDepartureTimeActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textFieldDepartureTime">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="Enter departure time"/>
+          </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="enterDepartureTime"/>
+          </AccessibilityProperties>
+        </Component>
+        <Component class="javax.swing.JButton" name="buttonReturnToAddingBusLine">
+          <Properties>
+            <Property name="mnemonic" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="KeyEvent.VK_R" type="code"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Return"/>
+            <Property name="toolTipText" type="java.lang.String" value="Return to adding bus line"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonReturnToAddingBusLineActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="textAddedBusStopInDepartureTime">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Added bus stop: "/>
+            <Property name="toolTipText" type="java.lang.String" value="Text: Added bus stop: "/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="textEnterDepartureTime">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Enter departure time:"/>
+            <Property name="toolTipText" type="java.lang.String" value="Text: Enter bus line name:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="textUserAddedBusStop2">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="Added bus stop"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="textAddedBusLine">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Added bus line:"/>
+            <Property name="toolTipText" type="java.lang.String" value="Text: Added bus line:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="textUserAddedBusLine">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="Bus line added by user"/>
+          </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="textUserAddedBusLine"/>
+          </AccessibilityProperties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="textConfirmationAddingTime">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="14" style="1"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="toolTipText" type="java.lang.String" value="textConfirmationAddingTime"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JFrame" name="showBusStopsWindow">
+      <Properties>
+        <Property name="location" type="java.awt.Point" editor="org.netbeans.beaninfo.editors.PointEditor">
+          <Point value="[700, 300]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[400, 316]"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace pref="38" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="textListOfAllBusStops" min="-2" pref="315" max="-2" attributes="0"/>
+                              <Component id="panel" min="-2" pref="315" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="buttonReturnFromShowAllBusStops" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="160" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                  <Component id="textListOfAllBusStops" min="-2" pref="42" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="panel" pref="176" max="32767" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="buttonReturnFromShowAllBusStops" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="buttonReturnFromShowAllBusStops">
+          <Properties>
+            <Property name="mnemonic" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="KeyEvent.VK_R" type="code"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Return"/>
+            <Property name="toolTipText" type="java.lang.String" value="Return to main menu"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonReturnFromShowAllBusStopsActionPerformed"/>
+          </Events>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="panel">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextArea" name="listOfAllBusStops">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+                <Property name="columns" type="int" value="18"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="0"/>
+                </Property>
+                <Property name="rows" type="int" value="5"/>
+              </Properties>
+              <AccessibilityProperties>
+                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="listOfAllBusStops"/>
+                <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="listOfAllBusStops"/>
+              </AccessibilityProperties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="textListOfAllBusStops">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="36" style="0"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="List of all bus stops"/>
+            <Property name="toolTipText" type="java.lang.String" value="List of all Bus Stops text"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JFrame" name="deleteBusStopWindow">
+      <Properties>
+        <Property name="location" type="java.awt.Point" editor="org.netbeans.beaninfo.editors.PointEditor">
+          <Point value="[700, 300]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[400, 316]"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="textDeleteBusStop" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="115" max="32767" attributes="0"/>
+                          <Component id="buttonReturnFromDelete" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                          <Component id="textEnterBusStopNameToDelete" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="textConfirmationOfDeletion" alignment="1" max="32767" attributes="0"/>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="textFieldDeleteBusStop" max="32767" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="buttonDeleteBusStop" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                  <Component id="textDeleteBusStop" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="97" max="32767" attributes="0"/>
+                  <Component id="textEnterBusStopNameToDelete" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="buttonDeleteBusStop" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="textFieldDeleteBusStop" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="textConfirmationOfDeletion" min="-2" pref="22" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                  <Component id="buttonReturnFromDelete" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="textDeleteBusStop">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="36" style="0"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="Delete bus stop"/>
+            <Property name="toolTipText" type="java.lang.String" value="Text: Add new bus stop"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="buttonDeleteBusStop">
+          <Properties>
+            <Property name="mnemonic" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="KeyEvent.VK_D" type="code"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Delete"/>
+            <Property name="toolTipText" type="java.lang.String" value="Deletes written bus stop"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonDeleteBusStopActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textFieldDeleteBusStop">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="Enter a bus stop name"/>
+          </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="textFieldDeleteBusStop"/>
+          </AccessibilityProperties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldDeleteBusStopActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="buttonReturnFromDelete">
+          <Properties>
+            <Property name="mnemonic" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="KeyEvent.VK_R" type="code"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Return"/>
+            <Property name="toolTipText" type="java.lang.String" value="Return to main menu"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonReturnFromDeleteActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="textEnterBusStopNameToDelete">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Enter bus stop name to delete:"/>
+            <Property name="toolTipText" type="java.lang.String" value="Text: Enter bus stop name to delete:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="textConfirmationOfDeletion">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="14" style="1"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="toolTipText" type="java.lang.String" value="textConfirmationOfDeletion"/>
+          </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="textConfirmationOfDeletion"/>
+            <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="Text that shows if deletion was succesfull"/>
+          </AccessibilityProperties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JFrame" name="showBusStopTimetableWindow">
+      <Properties>
+        <Property name="location" type="java.awt.Point" editor="org.netbeans.beaninfo.editors.PointEditor">
+          <Point value="[700, 300]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[420, 316]"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                          <Component id="textEnterBusStopNameToShowTimetable" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="135" max="32767" attributes="0"/>
+                          <Component id="buttonReturnFromShowTimetable" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="textFieldShowBusStopTimetable" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="buttonShowBusStopTimetable" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="textShowTimetable" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                  <Component id="textShowTimetable" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="98" max="32767" attributes="0"/>
+                  <Component id="textEnterBusStopNameToShowTimetable" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="buttonShowBusStopTimetable" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="textFieldShowBusStopTimetable" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="buttonReturnFromShowTimetable" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="textShowTimetable">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="36" style="0"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="Show bus stop timetable"/>
+            <Property name="toolTipText" type="java.lang.String" value="Text: Show bus stop timetable"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="buttonShowBusStopTimetable">
+          <Properties>
+            <Property name="mnemonic" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="KeyEvent.VK_S" type="code"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Show"/>
+            <Property name="toolTipText" type="java.lang.String" value="Shows written bus stop timetable"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonShowBusStopTimetableActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textFieldShowBusStopTimetable">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="Enter a bus stop name to show timetable"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldShowBusStopTimetableActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="buttonReturnFromShowTimetable">
+          <Properties>
+            <Property name="mnemonic" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="KeyEvent.VK_R" type="code"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Return"/>
+            <Property name="toolTipText" type="java.lang.String" value="Return to main menu"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonReturnFromShowTimetableActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="textEnterBusStopNameToShowTimetable">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Enter bus stop name to show its timetable:"/>
+            <Property name="toolTipText" type="java.lang.String" value="Text: Enter bus stop name to show its timetable:"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JFrame" name="busStopTimetableWindow">
+      <Properties>
+        <Property name="location" type="java.awt.Point" editor="org.netbeans.beaninfo.editors.PointEditor">
+          <Point value="[700, 300]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[400, 316]"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jScrollPane1" alignment="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="busStopNameToShow" alignment="0" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="164" max="-2" attributes="0"/>
+                  <Component id="buttonReturnFromTimetable" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="164" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="busStopNameToShow" pref="44" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="197" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="buttonReturnFromTimetable" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="buttonReturnFromTimetable">
+          <Properties>
+            <Property name="mnemonic" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="KeyEvent.VK_R" type="code"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Return"/>
+            <Property name="toolTipText" type="java.lang.String" value="Return to choosing bus stop"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonReturnFromTimetableActionPerformed"/>
+          </Events>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="timetable">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="0" rowCount="0"/>
+                </Property>
+                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                  <TableColumnModel selectionModel="0"/>
+                </Property>
+                <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                  <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                </Property>
+              </Properties>
+              <AccessibilityProperties>
+                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Timetable of desired bus stop"/>
+                <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="Timetable of desired bus stop"/>
+              </AccessibilityProperties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="busStopNameToShow">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="Name of bus stop to show timetable"/>
+          </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="busStopNameToShow"/>
+          </AccessibilityProperties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="mainMenu"/>
+    <Property name="location" type="java.awt.Point" editor="org.netbeans.beaninfo.editors.PointEditor">
+      <Point value="[700, 300]"/>
+    </Property>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="3"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace pref="132" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="2" attributes="0">
+                  <Component id="menuAddBusStop" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="textBusTimetable" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="menuDeleteBusStop" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="menuShowBusStopTimetable" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="menuShowBusStops" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="menuExit" alignment="2" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+              <Component id="textBusTimetable" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="53" max="32767" attributes="0"/>
+              <Component id="menuAddBusStop" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="menuDeleteBusStop" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="menuShowBusStopTimetable" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="menuShowBusStops" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="menuExit" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JButton" name="menuAddBusStop">
+      <Properties>
+        <Property name="mnemonic" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="KeyEvent.VK_1" type="code"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Add new bus stop"/>
+        <Property name="toolTipText" type="java.lang.String" value="Add new bus stop"/>
+        <Property name="alignmentX" type="float" value="100.0"/>
+        <Property name="alignmentY" type="float" value="100.5"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[180, 23]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[180, 23]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[180, 23]"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuAddBusStopActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="menuDeleteBusStop">
+      <Properties>
+        <Property name="mnemonic" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="KeyEvent.VK_2" type="code"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Delete bus stop"/>
+        <Property name="toolTipText" type="java.lang.String" value="Delete bus stop"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[180, 23]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[180, 23]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[180, 23]"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuDeleteBusStopActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="menuShowBusStopTimetable">
+      <Properties>
+        <Property name="mnemonic" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="KeyEvent.VK_3" type="code"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Show bus stop timetable"/>
+        <Property name="toolTipText" type="java.lang.String" value="Show bus stop timetable"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[180, 23]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[180, 23]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[180, 23]"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuShowBusStopTimetableActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="menuShowBusStops">
+      <Properties>
+        <Property name="mnemonic" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="KeyEvent.VK_4" type="code"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Show bus stops"/>
+        <Property name="toolTipText" type="java.lang.String" value="Show bus stops"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[180, 23]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[180, 23]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[180, 23]"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuShowBusStopsActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="menuExit">
+      <Properties>
+        <Property name="mnemonic" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="KeyEvent.VK_5" type="code"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Exit"/>
+        <Property name="toolTipText" type="java.lang.String" value="Exit"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuExitActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="textBusTimetable">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="36" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Bus timetable"/>
+      </Properties>
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="text: Bus Timetable"/>
+      </AccessibilityProperties>
+    </Component>
+  </SubComponents>
+</Form>

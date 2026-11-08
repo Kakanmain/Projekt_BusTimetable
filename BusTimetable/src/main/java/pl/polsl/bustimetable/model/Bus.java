@@ -1,12 +1,13 @@
 package pl.polsl.bustimetable.model;
 
+import pl.polsl.bustimetable.exceptions.BusTimetableException;
 import java.util.ArrayList;
 
 /**
  * Represents a bus with its name and departure times.
  * 
  * @author Bartosz Dyba
- * @version 1.0
+ * @version 1.1
  */
 public class Bus {
     /** Name of the bus line. */
@@ -24,9 +25,9 @@ public class Bus {
      */
     public Bus(String name) throws BusTimetableException {
         if (name.isEmpty()) {
-            throw new BusTimetableException("Bus line cannot be empty!");
+            throw new BusTimetableException("Bus line cannot be empty!!!");
         }else if (name.length() > 3) {
-            throw new BusTimetableException("Bus line name is too long!");
+            throw new BusTimetableException("Bus line name is too long!!!");
         }
         
         this.busName = name;
@@ -50,7 +51,7 @@ public class Bus {
      */
     public void addDepartureTime(int time) throws BusTimetableException {
         if ((time > 24) || (time < 0)) {
-            throw new BusTimetableException("Time of departure must be between 0 and 24!");
+            throw new BusTimetableException("Time of departure must be between 0 and 24!!!");
         }
         departureTimes.add(time);
     }
