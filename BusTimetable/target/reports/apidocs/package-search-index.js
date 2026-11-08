@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html","k":"18"},{"l":"pl.polsl.bustimetable"},{"l":"pl.polsl.bustimetable.controller"},{"l":"pl.polsl.bustimetable.model"},{"l":"pl.polsl.bustimetable.view"}];updateSearchResults();

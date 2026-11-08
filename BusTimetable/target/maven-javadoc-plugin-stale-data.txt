@@ -1,0 +1,47 @@
+-J-Duser.language=
+-J-Duser.country=
+@options
+@packages
+--no-fonts
+-encoding
+'UTF-8'
+-protected
+--release
+25
+-sourcepath
+'C:/Users/kakan/OneDrive/Pulpit/java/Dyba.Bartosz.ex1.final/BusTimetable/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2026. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/kakan/OneDrive/Pulpit/java/Dyba.Bartosz.ex1.final/BusTimetable/target/reports/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'BusTimetable 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'BusTimetable 1.0-SNAPSHOT API'
+pl.polsl.bustimetable
+pl.polsl.bustimetable.controller
+pl.polsl.bustimetable.model
+pl.polsl.bustimetable.view
+C:\Users\kakan\OneDrive\Pulpit\java\Dyba.Bartosz.ex1.final\BusTimetable\src\main\java = 1792698591646
+C:\Users\kakan\OneDrive\Pulpit\java\Dyba.Bartosz.ex1.final\BusTimetable\target\reports\apidocs\allclasses-index.html = 1792968920817
+C:\Users\kakan\OneDrive\Pulpit\java\Dyba.Bartosz.ex1.final\BusTimetable\target\reports\apidocs\allpackages-index.html = 1792968920819
+C:\Users\kakan\OneDrive\Pulpit\java\Dyba.Bartosz.ex1.final\BusTimetable\target\reports\apidocs\element-list = 1792968920750
+C:\Users\kakan\OneDrive\Pulpit\java\Dyba.Bartosz.ex1.final\BusTimetable\target\reports\apidocs\help-doc.html = 1792968920835
+C:\Users\kakan\OneDrive\Pulpit\java\Dyba.Bartosz.ex1.final\BusTimetable\target\reports\apidocs\index-all.html = 1792968920830
+C:\Users\kakan\OneDrive\Pulpit\java\Dyba.Bartosz.ex1.final\BusTimetable\target\reports\apidocs\index.html = 1792968920809
+C:\Users\kakan\OneDrive\Pulpit\java\Dyba.Bartosz.ex1.final\BusTimetable\target\reports\apidocs\member-search-index.js = 1792968920823
+C:\Users\kakan\OneDrive\Pulpit\java\Dyba.Bartosz.ex1.final\BusTimetable\target\reports\apidocs\module-search-index.js = 1792968920820
+C:\Users\kakan\OneDrive\Pulpit\java\Dyba.Bartosz.ex1.final\BusTimetable\target\reports\apidocs\overview-summary.html = 1792968920833
+C:\Users\kakan\OneDrive\Pulpit\java\Dyba.Bartosz.ex1.final\BusTimetable\target\reports\apidocs\overview-tree.html = 1792968920806
+C:\Users\kakan\OneDrive\Pulpit\java\Dyba.Bartosz.ex1.final\BusTimetable\target\reports\apidocs\package-search-index.js = 1792968920821
+C:\Users\kakan\OneDrive\Pulpit\java\Dyba.Bartosz.ex1.final\BusTimetable\target\reports\apidocs\search.html = 1792968920832
+C:\Users\kakan\OneDrive\Pulpit\java\Dyba.Bartosz.ex1.final\BusTimetable\target\reports\apidocs\serialized-form.html = 1792968920778
+C:\Users\kakan\OneDrive\Pulpit\java\Dyba.Bartosz.ex1.final\BusTimetable\target\reports\apidocs\tag-search-index.js = 1792968920824
+C:\Users\kakan\OneDrive\Pulpit\java\Dyba.Bartosz.ex1.final\BusTimetable\target\reports\apidocs\type-search-index.js = 1792968920821
