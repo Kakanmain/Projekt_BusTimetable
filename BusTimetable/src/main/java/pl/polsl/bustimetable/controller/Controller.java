@@ -3,187 +3,218 @@ package pl.polsl.bustimetable.controller;
 import java.util.ArrayList;
 import pl.polsl.bustimetable.model.BusStop;
 import pl.polsl.bustimetable.model.Bus;
-import pl.polsl.bustimetable.model.BusTimetableException;
-import pl.polsl.bustimetable.view.View;
+import pl.polsl.bustimetable.exceptions.BusTimetableException;
+import pl.polsl.bustimetable.view.Window;
 
 /**
  * Controller responsible for managing bus stops and handling user commands.
- * Connects the model with the view.
+ * Connects the model with the window.
  * 
  * @author Bartosz Dyba
- * @version 1.0
+ * @version 1.2
  */
 public class Controller {
-    /** View used for communication with the user. */
-    private View view;
     
     /** List of all created bus stops. */
     private ArrayList<BusStop> busStops = new ArrayList<>();
     
+    /** Holds currently used bus stop. */
+    private BusStop currentBusStop;
+    
+    /** Holds currently used bus line. */
+    private Bus currentBusLine;
+    
+    /** Holds argument provided by user. */
+    private String arg;
+    
+    /** Holds the Window object used for communication with the GUI. */
+    private Window window;
+    
+    /** Creates a new Controller  object. */
+    public Controller() {}
+    
     /**
-    * Creates a controller with view.
-    *
-    * @param view the view used for user interaction
-    */
-    public Controller(View view)
-    {
-        this.view = view;
+     * Saves argument to variable for further usage.
+     * 
+     * @param input argument given by user
+     */
+    public void setArg(String input){
+        arg = input;
     }
     
     /**
-    * Displays the main menu and handles the user's selected option.
-    * Displays an error message if the input is invalid.
-    */
-    public void readArguments(){
-        view.showMenu();
+     * Returns argument given by user.
+     * 
+     * @return argument given by user
+     */
+    public String getArg(){
+        return arg;
+    }
+    
+    /**
+     * Sets the window used by the controller.
+     * 
+     * @param w the Window object used by the program
+     */
+    public void setWindow (Window w){
+        window  = w;
+    }
+    
+    /**
+     * Adds departure time to currentBusLine.
+     * Displays an error message if the input is invalid.
+     * 
+     * @param time time to add
+     * @return boolean whether the operation was successful or not
+     */
+    public boolean addDepartureTime(String time){
+        boolean success = true;
         try{
-            String input = view.getInput();
-            int answer = Integer.parseInt(input);
-            if((answer > 0) && (answer <= 5)){
-                switch (answer){
-                    case 1 -> addBusStop();
-                    case 2 -> deleteBusStop();
-                    case 3 -> showBusStopTimetable();
-                    case 4 -> showBusStops();
-                    case 5 -> exit();
-                }
-            }else{
-                view.showMessage("Input must be between 1 and 5!");
-            }
-        }catch(NumberFormatException e) {
-            view.showMessage("Input must be a number!");
+            int intInput = Integer.parseInt(time);
+            currentBusLine.addDepartureTime(intInput);
+        } catch (BusTimetableException e) {
+            window.popupError(e.getMessage());
+            success = false;
+        } catch (NumberFormatException e) {
+            window.popupError("Time must be a number!!!");
+            success = false;
         }
+        return success;
     }
     
     /**
-    * After writing the name of a non-existing bus stop it creates one, then it
-    * asks the user to input a correct bus line to add to this bus stop and then
-    * it asks to add departure times to this bus line. Once the user enters
-    * "N", he can continue adding bus lines again and after another "N", program 
-    * stops returns to main menu.
-    * Displays an error message if the input is invalid.
-    */
-    private void addBusStop(){
-        view.showMessage("Please enter the name for new bus stop: ");
-        String busStopName = view.getInput();
+     * Adds bus line to currentBusStop 
+     * and changes currentBusLine to the new one.
+     * Displays an error message if the input is invalid.
+     * 
+     * @param name the name of bus line to add
+     * @return boolean whether the operation was successful or not
+     */
+    public boolean addBusLine(String name){
+        boolean success = true;
+        
+        try{
+            Bus bus = new Bus(name);
+            currentBusStop.addBusLine(bus);
+            currentBusLine = bus;
+        } catch (BusTimetableException e) {
+            window.popupError(e.getMessage());
+            success = false;
+        }
+        return success;
+    }
+       
+    /**
+     * Adds new bus stop and changes currentBusStop to the new one.
+     * Displays an error message if the input is invalid.
+     * 
+     * @param name the name of bus stop to add
+     * @return boolean whether the operation was successful or not
+     */
+    public boolean addBusStop(String name){
+        boolean success = true;
+        String busStopName = name;
         for (BusStop busStop : busStops) {
             if(busStop.getBusStopName().equals(busStopName)){
-                view.showMessage("Bus stop already exists!");
-                readArguments();
-                return;
+                window.popupError("Bus stop already exists!!!");
+                return false;
             }
         }
         
         try {
             BusStop busStop = new BusStop(busStopName);
             busStops.add(busStop);
+            currentBusStop = busStop;
 
-            view.showMessage("Enter a line to add to this bus stop or type 'N' to stop adding buses");
-            do {
-                String input = view.getInput();
-                if (input.equals("N")) break;
-                Bus bus = new Bus(input);
-                busStop.addBusLine(bus);
-                
-                view.showMessage("Enter a departure time to add to this bus or type 'N' to stop adding times");
-                do {
-                    String input2 = view.getInput();
-                    if (input2.equals("N")) break;
-                    int intInput = Integer.parseInt(input2);
-                    bus.addDepartureTime(intInput);
-
-                } while (true);    
-            view.showMessage("Enter another line or type 'N' to stop adding buses");
-            } while (true);
-            
         } catch (BusTimetableException e) {
-            view.showMessage(e.getMessage());
-        } catch (NumberFormatException e) {
-            view.showMessage("Time must be a number!");
+            window.popupError(e.getMessage());
+            success = false;
         }
-        readArguments();
+        return success;
     }
     
     /**
-    * Deletes an existing bus stop after writing its name.
-    * Displays an error message if the bus stop does not exist.
+     * Deletes an existing bus stop.
+     * Displays a warning message if name is empty.
+     * Displays an error message if the input is invalid.
+     * 
+     * @param name the name of bus stop to delete
+     * @return boolean whether the operation was successful or not
      */
-    private void deleteBusStop(){
-        view.showMessage("Please enter the name of bus stop to delete: ");
-        String busStopName = view.getInput();
-        int i = 0;
-        try{
-        for (BusStop busStop : busStops) {
-            if(busStop.getBusStopName().equals(busStopName)) break;
-            i++;
-        }
-        busStops.remove(i);
-        } catch (IndexOutOfBoundsException e){
-            view.showMessage("Bus stop does not exist!");
-        }
-        readArguments();
-    }
-    
-    /**
-    * Displays the timetable of the given bus stop.
-    * 
-    * AI helped with combining strings using a StringBuilder.
-    * It allows departure times to be combined into one string,
-    * making the displayed message cleaner and easier to read.
-    *
-    * @param name the name of the bus stop
-    */
-    public void showTimetable(String name){ 
-        for (BusStop busStop : busStops) {
-            if(busStop.getBusStopName().equals(name)){
-                for (Bus bus : busStop.getBusLines()) {
-                    StringBuilder message = new StringBuilder(); // AI
-                    view.showMessage(bus.getBusName()+": ");
-                            
-                    for (int time : bus.getDepartureTimes()){
-                        message.append(time).append(" "); // AI
-                    }
-                    view.showMessage(message.toString()); // AI
-                }
+    public boolean deleteBusStop(String name){
+        boolean success = true;
+        if(name.isBlank()){
+            success = false;
+            window.popupWarning("Please enter bus stop name to delete!");
+        } else {
+            int i = 0;
+            
+            try{
+            for (BusStop busStop : busStops) {
+                if(busStop.getBusStopName().equals(name)) break;
+                i++;
+            }
+            busStops.remove(i);
+            } catch (IndexOutOfBoundsException e){
+                window.popupError("There is no bus stop of given name to delete!!!");
+                success = false;
             }
         }
+        return success;
+    }
+
+    /**
+     * Creates new 2D table with rows equal to number of bus lines
+     * at the given bus stop and two columns (bus line | times of departure).
+     * Then it inputs bus lines and their time of departure to this 2D table.
+     * 
+     * AI-assisted code:
+     * With complexity of javax.swing.table.DefaultTableModel,
+     * AI helped create the code to prepare data for a JTable in Swing.
+     * 
+     * @param name the name of bus stop timetable to show
+     * @return 2D table data of bus lines with their times of departure
+     *         or null if the bus stop does not exist
+     */
+    public Object[][] showBusStopTimetable(String name) {
+        for (BusStop busStop : busStops) {
+            if (busStop.getBusStopName().equals(name)) {
+                Object[][] data = new Object[busStop.getBusLines().size()][2];
+
+                int i = 0;
+                for (Bus bus : busStop.getBusLines()) {
+                    StringBuilder message = new StringBuilder();
+                    
+                    for (int time : bus.getDepartureTimes()) {
+                       message.append(time).append(" ");
+                    }
+
+                    data[i][0] = bus.getBusName();
+                    data[i][1] = message.toString();
+                    i++;
+                }
+                return data;
+            }
+        }    
+        return null;
     }
     
     /**
-    * Asks the user for a bus stop name and displays its timetable.
-    * Displays a message if no bus stops are created.
-    */
-    private void showBusStopTimetable(){ 
-        if (busStops.isEmpty()){
-            view.showMessage("There are no bus stops to show");
-        } else {
-        view.showMessage("Enter the name of the desired bus stop");
-        String input = view.getInput();
-        showTimetable(input);
-        }
-        readArguments();
-    }
-    
-    /**
-     * Displays the names of all created bus stops.
+     * Creates a list of all bus stop names.
+     * Uses StringBuilder to place each bus stop name under the other.
      * 
      * AI-assisted code:
      * As being new to java AI helped create for loop that iterates
      * through the busStops list.
-     * Each bus stop is passed to the showName() method to display its name.
+     * 
+     * @return StringBuilder to correctly show in GUI
      */
-    private void showBusStops(){
+    public StringBuilder showBusStops(){
+        StringBuilder message = new StringBuilder();
         for (BusStop busStop : busStops) {
-            view.showName(busStop);
+            message.append(busStop.getBusStopName());
+            message.append("\n");
         }
-        readArguments();
-    }
-    
-    
-    /**
-     * Exits the program
-     */
-    private void exit(){
-        return;
+        return message;
     }
 }

@@ -1,48 +1,40 @@
 package pl.polsl.bustimetable;
-
 import pl.polsl.bustimetable.controller.Controller;
-import pl.polsl.bustimetable.view.View;
+import pl.polsl.bustimetable.view.Window;
 
 /**
  * Bus timetable application.
  * Allows users to add and delete bus stops,
  * add bus lines and departure times,
- * and display bus stop timetables.
+ * and display bus stop timetables and all bus stops.
  *
  * @author Bartosz Dyba
- * @version 1.0
+ * @version 1.2
  */
 public class BusTimetable {
 
-    /**
-     * Creates a new BusTimetable object.
-     */
+    /** Creates a new BusTimetable object. */
     public BusTimetable() {
     }
     
     /**
      * Main method of application.
      * If no arguments are provided, the main menu is displayed.
-     * If arguments are provided, each argument represents a bus stop name.
-     * Bus stop timetables are displayed in the order of the arguments.
-     * Arguments right now are not usable, but in future they can be used
-     * to read instantly a bus stop timetable that was loaded from a file.
+     * If arguments are provided, only the first argument is taken into account.
+     * The main menu is displayed and the argument is passed to the controller 
+     * and from controller into text field in view.window as a default 
+     * text written in option "menuShowBusStopTimetable"
      * 
-     * @param args bus stop names in the order they should be displayed
+     * @param args bus stop name to be written as a default option in text 
+     * field choosing to show bus stop timetable
      */
     public static void main(String[] args) {
-        View view = new View();
-        Controller controller = new Controller(view);
+        Controller controller = new Controller();
         
+        if (args.length != 0){
+            controller.setArg(args[0]);
+        } 
         
-        if (args.length == 0){
-            controller.readArguments();
-        } else {
-            for (int i=0; i < args.length; i++){
-                controller.showTimetable(args[i]);
-            }
-            return;
-        }
+        java.awt.EventQueue.invokeLater(() -> new Window(controller).setVisible(true));       
     } 
 }
-
